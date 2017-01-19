@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+
+<style>
+
+
+* {box-sizing:border-box}
+body {font-family: Arial,sans-serif;margin:0;
+  background: -moz-linear-gradient(59.52% 32.83% 0deg,rgba(0, 0, 0, 1) 0%,rgba(226, 227, 228, 1) 51.49%,rgba(217, 218, 219, 1) 53.38%,rgba(62, 62, 63, 1) 85.89%,rgba(0, 0, 0, 1) 100%);
+  background : -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(226, 227, 228, 1) 51.49%, rgba(217, 218, 219, 1) 53.38%, rgba(62, 62, 63, 1) 85.89%, rgba(0, 0, 0, 1) 100%);
+  background : -webkit-gradient(linear,59.52% 32.83% ,149.61% 32.83% ,color-stop(0,rgba(0, 0, 0, 1) ),color-stop(0.5149,rgba(226, 227, 228, 1) ),color-stop(0.5338,rgba(217, 218, 219, 1) ),color-stop(0.8589,rgba(62, 62, 63, 1) ),color-stop(1,rgba(0, 0, 0, 1) ));
+  background : -o-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(226, 227, 228, 1) 51.49%, rgba(217, 218, 219, 1) 53.38%, rgba(62, 62, 63, 1) 85.89%, rgba(0, 0, 0, 1) 100%);
+  background : -ms-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(226, 227, 228, 1) 51.49%, rgba(217, 218, 219, 1) 53.38%, rgba(62, 62, 63, 1) 85.89%, rgba(0, 0, 0, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000' ,GradientType=0)";
+  background : linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(226, 227, 228, 1) 51.49%, rgba(217, 218, 219, 1) 53.38%, rgba(62, 62, 63, 1) 85.89%, rgba(0, 0, 0, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000' , GradientType=1);
+}
+
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  top: 65px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  
+  position: absolute;
+  top: 100%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+} 
+
+/* Caption text */
+.text {
+  color: #black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height:13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6 ease;
+}
+
+.active, .dot:hover {
+  background-color: gray;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+footer {
+
+    display: block;
+    margin-left: 45%;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+    position: relative;
+ 
+   animation: mymove 10s;
+   
+}
+
+
+@keyframes clearing {
+
+    /*25%  {top: 0px; left: 900px;}*/
+    0%  {opacity: 0;}
+    /*75%  {top: 0px; left: 450px;}*/
+    50% {opacity: .5;}
+    100% {opacity: 1;}
+
+  }
+/* Standard syntax */
+@keyframes mymove {
+    0%   {top: 0px; left: -50%;}
+    /*25%  {top: 0px; left: 900px;}*/
+    50%  {top: 0px; left: 50%;}
+    /*75%  {top: 0px; left: 450px;}*/
+    100% {top: 0px; left: 0%;}
+}
+
+</style>
+
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="1.jpg" style="width:700px">
+  <div class="text">property of Mercedes-Benz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="2.jpg" style="width:700px">
+  <div class="text">property of Mercedes-Benz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="3.jpg" style="width:700px">
+  <div class="text">property of Mercedes-Benz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="4.jpg" style="width:700px">
+  <div class="text">property of Mercedes-Benz</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="5.jpg" style="width:700px">
+  <div class="text">property of Mercedes-Benz</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span>  
+</div>
+<footer text-align="center">
+    <img src="mercedes-benz.png" style="height: 220px; animation: clearing 10s;" >
+</footer>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
